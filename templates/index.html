@@ -1,20 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>SSE Debug Test</title>
+  <title>SSE Text Stream</title>
 </head>
 <body>
-  <h1>🧠 SSE Debug Test</h1>
+  <h1>🧠 SSE Text Stream</h1>
   <div id="main" style="display: flex;">
 
     <div id="text-content"style="flex: 1 1 50%;">
-      <h2>text</h2>
-      </div>
-
-
-
-      <div id="json-content"style="flex: 1 1 50%;">
-        <h2>json</h2>
+      <h2>text streaming with redis pubsub⬇️</h2>
       </div>
   </div>
 
@@ -35,7 +29,7 @@
       
       const logDiv = document.getElementById("text-content");
       const p = document.createElement("p");
-      p.textContent = `⏱ ${event.data}`;
+      p.textContent = `🗣️ ${event.data}`;
       logDiv.appendChild(p);
     };
 
@@ -43,28 +37,6 @@
       console.error("🔥 SSE error:", err);
     };
 
-
-
-    const json_source = new EventSource("/json-content");
-
-    json_source.onopen = () => {
-      console.log("📡 Connected to /json-content");
-    };
-
-    json_source.onmessage = (event) => {
-      console.log("📨 Event received:", event.data);
-      const data = JSON.parse(event.data);
-      
-      const logDiv = document.getElementById("json-content");
-      const p = document.createElement("p");
-      p.textContent = `random string: ${data.string} random number: ${data.number}`;
-      logDiv.appendChild(p);
-    };
-
-    json_source.onerror = (err) => {
-      console.error("🔥 SSE error:", err);
-    };
-    
   </script>
 </body>
 </html>
