@@ -85,6 +85,6 @@ Will instantly appear on the frontend as:
 
 ---
 
-📄 **Original Version (Without Redis)**  
+📄 **Scalable Version (With Redis)**  
 Want the simpler version without Redis?  
 👉 Check the [`simple-sse` branch](https://github.com/jztchl/sse_demo/tree/main)
