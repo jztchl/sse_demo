@@ -22,6 +22,6 @@ Open `http://localhost:5000/`
 
 ---
 
-📄 **Original Version (Without Redis)**  
+📄 **Simple Version (Without Redis)**  
 Want the scalable version with Redis?  
 👉 Check the [`redis-sse` branch](https://github.com/jztchl/sse_demo/tree/scalable_version)
