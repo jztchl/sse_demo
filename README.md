@@ -1,5 +1,4 @@
 
-````markdown
 # 🔥 Real-Time Text Stream with Flask + Redis + SSE
 
 Simple real-time broadcasting app using **Flask**, **Redis Pub/Sub**, and **Server-Sent Events (SSE)**.  
